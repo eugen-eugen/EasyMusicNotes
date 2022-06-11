@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html { 
+    background: rgb(66, 172, 92) no-repeat center center;
+    background-size: cover; 
+    margin:0;
+    padding:0;
+    color:rgb(0, 0, 0);
+    font-size:18px;
+    font-weight: 700;
+    font-family: Helvetica, sans-serif;
+}
+#desk {
+    width:1470px;
+    position:absolute;
+    top:150px;
+    left:50%;
+    margin: 0 0 0 -735px;
+    border:solid 3px rgb(0, 0, 0);
+    border-radius: 20px;
+    height: 363px; 
+}
+#score, #card_stack_new, .text 
+{
+    background:rgba(5, 80, 250, 0.795);
+    cursor: default;
+}
+#desk .text {
+    width: 164px;
+    height: 2px;
+    padding: 10px 10px 27px 10px;
+    float: left;
+    border-radius: 10px;
+    border: solid 3px rgb(255, 255, 255);
+    margin: 10px 10px 0 10px;
+    text-align: center;  
+}
+#desk .cards {
+    width:164px;
+    height: 240px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 3px rgb(0, 0, 0);
+    float: left;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#desk .cards img {
+    transition: all 400ms;
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    bottom: 5%;
+    right: 5%; 
+    width: 90%;
+    cursor: pointer;
+}
+#desk .cards img:hover {
+    width: 95%;
+    top: 1%;
+    left: 2%;
+    right: 2%;
+    bottom: 2%;
+}
+#desk #score img:hover {
+    width: 90%;
+    top: 4%;
+    left: 5%;
+    bottom: 5%;
+    bottom: 5%;
+    right: 5%;
+    cursor: default;
+}
+#pianokeyboard{
+    width: 1470px;
+    height: 230px;
+    background-color: rgb(32, 13, 13);
+    position:absolute;
+    top: 350px
+}
+.key{
+    width:26px;
+    height: 210px;
+    background-color: white;
+    position:absolute;
+    top: 0;
+}
+#noteletter{
+    width:1470px;
+    position:absolute;
+    top: 520px;
+    left:50%;
+    margin: 0 0 0 -735px;
+    border:solid 3px rgb(0, 0, 0);
+    border-radius: 20px;
+    height: 250px; 
+}
+#noteletter .text {
+    width: 164px;
+    height: 2px;
+    padding: 10px 10px 27px 10px;
+    float: left;
+    border-radius: 10px;
+    border: solid 3px rgb(0, 0, 0);
+    margin: 10px 10px 0 10px;
+    text-align: center;  
+}
+
+#desk .marked{
+    height:260px;
+}

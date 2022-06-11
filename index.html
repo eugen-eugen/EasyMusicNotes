@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <script src="js/action_cards.js"></script>
+        <title>Easy Musicnotes</title>
+    </head>
+    <body>
+        <div id="desk">
+            <div class="text" onclick="handclick6()">Schlüssel</div>
+            <div class="text" onclick="handclick1()">Note</div>
+            <div class="text" onclick="handclick2()">Note</div>
+            <div class="text" onclick="handclick3()">Note</div>
+            <div class="text" onclick="handclick4()">Note</div>
+            <div class="text" onclick="handclick5()">Note</div>
+            <div class="text">Score</div>
+            <div id="card_stack_new" class="cards" onClick="Drawcards();">
+                <img id="notekey" src="images/Violin.png" height="91%">
+            </div>
+            <div id="card0" class="cards note marked">
+                <img id="card0img" src="cards/C1.png" height="91%">
+            </div>
+            <div id="card1" class="cards note">
+                <img id="card1img"src="cards/D1.png" height="91%">
+            </div>
+            <div id="card2" class="cards note">
+                <img id="card2img"src="cards/E1.png" height="91%">
+            </div>
+            <div id="card3" class="cards note">
+                <img id="card3img"src="cards/F1.png" height="91%">
+            </div>
+            <div id="card4" class="cards note">
+                <img id="card4img"src="cards/G1.png" height="91%">
+            </div>
+            <div id="score" class="cards"   height="91%">
+                <input id="points" type="" name="" value="0" disabled="true">
+                
+            </div>
+            
+        </div>
+        <div id="noteletter"> 
+            <div class="text" onclick="notePressed(event)">A1</div>
+            <div class="text" onclick="notePressed(event)">E1</div>
+            <div class="text" onclick="notePressed(event)">F1</div>
+            <div class="text" onclick="notePressed(event)">D1</div>
+            <div class="text" onclick="notePressed(event)">H1</div>
+            <div class="text" onclick="notePressed(event)">C1</div>
+            <div class="text" onclick="notePressed(event)">G1</div>
+            <div class="text" onclick="notePressed(event)">Ais</div>
+            <div class="text" onclick="notePressed(event)">E1</div>
+            <div class="text" onclick="notePressed(event)">Fis</div>
+            <div class="text" onclick="notePressed(event)">Dis</div>
+            <div class="text" onclick="notePressed(event)">Ais</div>
+            <div class="text" onclick="notePressed(event)">Cis</div>
+            <div class="text" onclick="notePressed(event)">Gis</div>
+            <div class="text" onclick="notePressed(event)">A1</div>
+            <div class="text" onclick="notePressed(event)">E1</div>
+            <div class="text" onclick="notePressed(event)">F1</div>
+            <div class="text" onclick="notePressed(event)">D1</div>
+            <div class="text" onclick="notePressed(event)">H1</div>
+            <div class="text" onclick="notePressed(event)">D1b</div>
+            <div class="text" onclick="notePressed(event)">E1b</div>
+            <div class="text" onclick="notePressed(event)">A1</div>
+            <div class="text" onclick="notePressed(event)">G1b</div>
+            <div class="text" onclick="notePressed(event)">A1b</div>
+            <div class="text" onclick="notePressed(event)">H1b</div>
+            <div class="text" onclick="notePressed(event)">H1</div>
+            <div class="text" onclick="notePressed(event)">C1</div>
+            <div class="text" onclick="notePressed(event)">G1</div>
+        </div>
+    </body>
+</html>
