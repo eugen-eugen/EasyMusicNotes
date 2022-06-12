@@ -1,4 +1,4 @@
-Notenliste=["C1","D1","E1","F1","G1","A1","H1","Cis","Dis","Fis","Gis","Ais","D1b","E1b","G1b","A1b","H1b"];
+Notenliste=["C1","D1","E1","F1","G1","A1","H1","Cis","Dis","Fis","Gis","Ais","Des","Es","Ges","As","b1"];
 Länge=Notenliste.length -1;
 
 function noteNameFromFileName(bildDateiName) {
