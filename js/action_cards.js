@@ -10,12 +10,8 @@ function noteNameFromFileName(bildDateiName) {
 }
  
 function Random_buttons(params) {// In dieser Funktion werden die unteren Notennamen generiert
-    for (let index = 0; index < Knöpfe.length/*28*/; index++) { // Diese Schleife läuft über die Knöpfe unten
-        const Knopf = Knöpfe[index]; // Knopf, bei dem die Schleife gerade ist
-        Knopf.innerHTML=Notenliste[Math.round(Math.random()*Länge)]; // Wir nehmen eine zufällige Note aus der Notenliste und packen sie in den Knopf       
-    } 
-    // Hier gibt es das Problem, dass nicht immer zu den Notenbildern auch unten die passenden Knöpfe gegeben sind
-    // Lösung: Alle Noten, die oben sind, werden unten als Knöpfe in zufälligen Knöpfen untergebracht
+    // Erst beschriften wir zufällige Knöpfe mit den angezeigten Noten. So ist sichergestellt, dass die angezeigten Noten 
+    // geraten werden können
     desk=document.getElementById("desk"); // 
     Noten=desk.getElementsByClassName("note");
     for (let notenNummer = 0; notenNummer < Noten.length /*5*/; notenNummer++){ //Die Schleife läuft über alle Noten
@@ -24,10 +20,23 @@ function Random_buttons(params) {// In dieser Funktion werden die unteren Notenn
         Img = document.getElementById (imgId) // Img wird genommen
         bildDateiName= Img.src; // Die Bilddatei wird genommen
         notenName=noteNameFromFileName(bildDateiName)
-        const Knopf = Knöpfe[Math.trunc(notenNummer*Knöpfe.length/Notenliste.length)+Math.trunc(Math.random()*Knöpfe.length/Notenliste.length)] // Wir nehmen einen zufälligen Knopf
-        Knopf.innerHTML=notenName;  // Wir nehmen den Notennamen und setzten ihn in den Knopf      
+        randomButtunNumber=Math.trunc(notenNummer*Knöpfe.length/Notenliste.length)+Math.trunc(Math.random()*Knöpfe.length/Notenliste.length)
+        var Knopf;
+        do{
+          Knopf = Knöpfe[Math.trunc(notenNummer*Knöpfe.length/Notenliste.length)+Math.trunc(Math.random()*Knöpfe.length/Notenliste.length)] // Wir nehmen einen zufälligen Knopf
+        }
+        while (Knopf.written)
+        Knopf.innerHTML=notenName  // Wir nehmen den Notennamen und setzten ihn in den Knopf
+        Knopf.written=true     
     }
 
+    // Danach fühlen wir noch nicht beschrifteten Knöpfe mit zufälligen Noten
+    for (let index = 0; index < Knöpfe.length/*28*/; index++) { // Diese Schleife läuft über die Knöpfe unten
+        const Knopf = Knöpfe[index]; // Knopf, bei dem die Schleife gerade ist
+        if (!Knopf.written){
+          Knopf.innerHTML=Notenliste[Math.round(Math.random()*Länge)]; // Wir nehmen eine zufällige Note aus der Notenliste und packen sie in den Knopf    
+        }   
+    } 
 }
 
 
