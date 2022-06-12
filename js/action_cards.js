@@ -10,6 +10,10 @@ function noteNameFromFileName(bildDateiName) {
 }
  
 function Random_buttons(params) {// In dieser Funktion werden die unteren Notennamen generiert
+    // Alle Knöpfe als nicht beschriftet markieren
+    for (let index = 0; index < Knöpfe.length/*28*/; index++) { // Diese Schleife läuft über die Knöpfe unten
+      Knöpfe[index].written=false
+    } 
     // Erst beschriften wir zufällige Knöpfe mit den angezeigten Noten. So ist sichergestellt, dass die angezeigten Noten 
     // geraten werden können
     desk=document.getElementById("desk"); // 
