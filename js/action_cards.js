@@ -110,11 +110,19 @@ function handclick6(){
     
 }
 
+function randomNotes(){
+    handclick2()
+    handclick3()
+    handclick4()
+    handclick5()
+    handclick1()
+}
+
 onload=function(){
     noteletter=document.getElementById("noteletter");
     Knöpfe=noteletter.getElementsByClassName("text");
+    randomNotes()
     Random_buttons()
-
 }
 var markedNote=0;// Die erste Note ist null und wird markiert
 var score=0;//Der Anfangspunktestand beträgt null
@@ -126,8 +134,10 @@ function notePressed(p) {
     src= markedImg.src;
     markedNoteName=noteNameFromFileName(src); 
     markedNote = markedNote + 1;// Die Markierung geht auf die nächste Note
-    if (markedNote == 5)// Sobald es keine Note mehr gibt, die markiert werden kann, dann wird wieder die Note null markiert und alles wiederholt sich
+    if (markedNote == 5){// Sobald es keine Note mehr gibt, die markiert werden kann, dann wird wieder die Note null markiert und alles wiederholt sich
        markedNote = 0// Die Markierung überträgt sich auf die erste Note
+       randomNotes() // neue zufällige Noten
+    }
     markedDiv = document.getElementById ("card" + markedNote)// Es wird div von der markierten Note ausgewählt
     markedDiv.classList.add("marked")// Die Höhe wird verändert / Die Note wird markiert  
     for (let index=0; index < 5; index++){// Das ist eine Schleife, die bei der ersten Note beginnt und bis zur 5. Note verläuft
