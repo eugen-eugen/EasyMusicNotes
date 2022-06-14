@@ -128,6 +128,7 @@ var markedNote=0;// Die erste Note ist null und wird markiert
 var score=0;//Der Anfangspunktestand beträgt null
 
 function notePressed(p) {
+    pressedNoteName=p.target.innerText
     markedImg = document.getElementById ("card" + markedNote + "img");// Es wird img von der markierten Note ausgewählt
     imgId= "card" + markedNote + "img";
     markedImg = document.getElementById (imgId)
@@ -147,7 +148,6 @@ function notePressed(p) {
         }
     }
 
-pressedNoteName=p.target.innerText
 if (markedNoteName==pressedNoteName){// Es wird überprüft, ob die richtige Note gedrückt wurde.
     score ++ //Wenn die richtige Note gedrückt wurde, bekommt man einen Punkt.
 }
