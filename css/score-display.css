@@ -52,6 +52,61 @@
   .above_0{
     border-bottom-color: rgba(255, 0, 0, 0);
   }
+
+  .above_3{
+    border-left-color: rgba(255, 0, 0, 0) 
+  }
   
+  .under_3{
+    border-left-color:rgba(255, 0, 0, 0)
+  }
   
+  .above_4{
+    border-top-color:rgba(255, 0, 0, 0)
+  }
   
+  .under_4{
+    border-left-color:rgba(255, 0, 0, 0);
+    border-bottom-color: rgba(255, 0, 0, 0);
+
+  }
+
+  .above_5{
+    border-right-color:rgba(255, 0, 0, 0);
+  }
+
+  .under_5{
+    border-left-color:rgba(255, 0, 0, 0);
+  }
+
+  .above_6{
+    border-right-color:rgba(255, 0, 0, 0);
+  }
+
+  .above_7{
+    border-left-color:rgba(255, 0, 0, 0);
+    border-bottom-color:rgba(255, 0, 0, 0);
+  }
+  
+
+  .under_7{
+    border-left-color:rgba(255, 0, 0, 0);
+    border-bottom-color:rgba(255, 0, 0, 0);
+  }
+
+  .under_9{
+    border-left-color:rgba(255, 0, 0, 0);
+  }
+
+  .above_nothing{
+    border-left-color:rgba(255, 0, 0, 0);
+    border-bottom-color:rgba(255, 0, 0, 0);
+    border-top-color:rgba(255, 0, 0, 0);
+    border-right-color:rgba(255, 0, 0, 0);
+  }
+
+  .under_nothing{
+    border-left-color:rgba(255, 0, 0, 0);
+    border-right-color:rgba(255, 0, 0, 0);
+    border-bottom-color:rgba(255, 0, 0, 0);
+  }
