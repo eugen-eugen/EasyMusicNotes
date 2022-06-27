@@ -1,9 +1,10 @@
 .display{
+    margin: 30px;
     text-align: center;
+    height: 115px;
   }
   .digit7 {
-    height: 215px;
-    width: 110px;
+    width: 50px;
     display:inline-block;
     border-right-width:50px;
     border-right-style:solid;
@@ -11,15 +12,13 @@
   }
   
   .above {
-    height: 100px;
-    width: 100px;
+    height: 50px;
     border-color: red;
     border-style: solid;
     border-width: 5px;
   }
   .under {
-    height: 100px;
-    width: 100px;
+    height: 50px;
     border-color: red;
     border-bottom-style: solid;
     border-right-style: solid;
@@ -44,9 +43,7 @@
   }
   
   .under_2{
-    border-top-color: rgba(255, 0, 0, 0);
-    border-left-color: rgba(255, 0, 0, 0);
-    border-bottom-color: rgba(255, 0, 0, 0);
+    border-right-color: rgba(255, 0, 0, 0);
   }
 
   .above_0{
@@ -106,6 +103,18 @@
   }
 
   .under_nothing{
+    border-left-color:rgba(255, 0, 0, 0);
+    border-right-color:rgba(255, 0, 0, 0);
+    border-bottom-color:rgba(255, 0, 0, 0);
+  }
+
+  .above_-{
+    border-left-color:rgba(255, 0, 0, 0);
+    border-top-color:rgba(255, 0, 0, 0);
+    border-right-color:rgba(255, 0, 0, 0);
+  }
+
+  .under_-{
     border-left-color:rgba(255, 0, 0, 0);
     border-right-color:rgba(255, 0, 0, 0);
     border-bottom-color:rgba(255, 0, 0, 0);
