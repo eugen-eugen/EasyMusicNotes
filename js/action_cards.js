@@ -1,5 +1,6 @@
 Notenliste=["C1","D1","E1","F1","G1","A1","H1","Cis","Dis","Fis","Gis","Ais","Des","Es","Ges","As","b1"];
 Länge=Notenliste.length -1;
+AnzahlDerNoten=6;
 
 function noteNameFromFileName(bildDateiName) {
     let lastSlashPosition =bildDateiName.lastIndexOf("/") //Wir brauchen den letzten Slash, weil danach der Notenname kommt. 
@@ -93,7 +94,15 @@ function handclick5(){
     Random_buttons()
 
 }
+function handclick5(){
+    Randomnotennummer=Math.round(Math.random()*Länge);
+    Randomnote=Notenliste[Randomnotennummer];
+    console.log("Text"+Randomnote+"ausgewählt"+"mit der Nummer"+Randomnotennummer);
+    img=document.getElementById("card5img");
+    img.src="cards/"+Randomnote+".png" 
+    Random_buttons()
 
+}
 var notekey="violin"
 function handclick6(){
     img=document.getElementById("notekey");
@@ -116,6 +125,7 @@ function randomNotes(){
     handclick4()
     handclick5()
     handclick1()
+    handclick7()
 }
 
 onload=function(){
@@ -135,13 +145,13 @@ function notePressed(p) {
     src= markedImg.src;
     markedNoteName=noteNameFromFileName(src); 
     markedNote = markedNote + 1;// Die Markierung geht auf die nächste Note
-    if (markedNote == 5){// Sobald es keine Note mehr gibt, die markiert werden kann, dann wird wieder die Note null markiert und alles wiederholt sich
+    if (markedNote == AnzahlDerNoten){// Sobald es keine Note mehr gibt, die markiert werden kann, wird wieder die Note null markiert und alles wiederholt sich
        markedNote = 0// Die Markierung überträgt sich auf die erste Note
        randomNotes() // neue zufällige Noten
     }
     markedDiv = document.getElementById ("card" + markedNote)// Es wird div von der markierten Note ausgewählt
     markedDiv.classList.add("marked")// Die Höhe wird verändert / Die Note wird markiert  
-    for (let index=0; index < 5; index++){// Das ist eine Schleife, die bei der ersten Note beginnt und bis zur 5. Note verläuft
+    for (let index=0; index <AnzahlDerNoten ; index++){// Das ist eine Schleife, die bei der ersten Note beginnt und bis zur 6. Note verläuft
         if (index != markedNote){// Index ist nicht gleich zur markierten Note
             markedDiv = document.getElementById("card" + index)// Es wird die Karte ausgewählt
             markedDiv.classList.remove("marked")// Alle Noten, die nicht ausgewählt sind, nehmen normale Größe an
