@@ -3,11 +3,35 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/layout.css">
-        <link rel="stylestyle" type="text/css" href="css/score-display.css">
+        <link rel="stylesheet" type="text/css" href="css/score-display.css">
         <script src="js/action_cards.js"></script>
-        <title>Easy Musicnotes</title>
+        <script src="js/score-display.js"></script>
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+        <link rel="manifest" href="./manifest.json">
+        <link rel="apple-touch-icon" href="./icons/logo128.png" sizes="57x57">
+            <title>Easy Musicnotes</title>
     </head>
     <body>
+        <div id="score-panel" class="display">
+            <div id="digit_1" class="digit7">
+                <div class="above above_1">
+                </div>
+                <div class="under under_1">
+                </div>
+            </div>
+            <div id="digit_2" class="digit7">
+                <div class="above above_2">
+                </div>
+                <div class="under under_2">
+                </div>
+            </div>
+            <div id="digit_2" class="digit7">
+                <div class="above above_0">
+                </div>
+                <div class="under under_0">
+                </div>
+            </div>
+        </div>
         <div id="desk">
             <div class="text" onclick="handclick6()">Schlüssel</div>
             <div class="text" onclick="handclick1()">Note 1</div>

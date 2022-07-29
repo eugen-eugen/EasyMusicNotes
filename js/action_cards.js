@@ -133,6 +133,7 @@ onload=function(){
     Knöpfe=noteletter.getElementsByClassName("text");
     randomNotes()
     Random_buttons()
+    showScore("score-panel", 0)
 }
 var markedNote=0;// Die erste Note ist null und wird markiert
 var score=0;//Der Anfangspunktestand beträgt null
@@ -164,7 +165,7 @@ if (markedNoteName==pressedNoteName){// Es wird überprüft, ob die richtige Not
 else{
     score --// Wenn jedoch die falsche Note gedrückt wurde, wird ein Punkt abgezogen.
 }
-   
+showScore("score-panel", score)
 points = document.getElementById("points")
 points.value = score
 
