@@ -7,6 +7,6 @@
     url: https://example.com
     language: string
     slack: https://example.com
-    tier: Mission Critical
+    tier: Test
     my_prop: string
   relations: {}
