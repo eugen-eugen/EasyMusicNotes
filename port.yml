@@ -1,10 +1,9 @@
 - identifier: MusicNote
   title: Music Note
-  team: []
+  team: [JeMo, DaniMo]
   icon: DefaultBlueprint
   blueprint: service
   properties:
-    readme: string
     url: https://example.com
     language: string
     slack: https://example.com
