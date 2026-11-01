@@ -103,7 +103,13 @@ function handclick5(){
     Random_buttons()
 
 }
+
+function handclick7(){
+    handclick5();
+}
+
 var notekey="violin"
+
 function handclick6(){
     img=document.getElementById("notekey");
     if (notekey=="violin"){
@@ -131,8 +137,18 @@ function randomNotes(){
 onload=function(){
     noteletter=document.getElementById("noteletter");
     Knöpfe=noteletter.getElementsByClassName("text");
+    document.querySelectorAll(".note").forEach((card) => {
+        card.addEventListener("click", () => {
+            ensureAudioContext();
+            playCardNote(card);
+        });
+    });
+    document.querySelectorAll(".text").forEach((button) => {
+        button.addEventListener("pointerdown", ensureAudioContext, { once: true });
+    });
     randomNotes()
     Random_buttons()
+    playCurrentMarkedNote();
     showScore("score-panel", 0)
 }
 var markedNote=0;// Die erste Note ist null und wird markiert
@@ -158,12 +174,15 @@ function notePressed(p) {
             markedDiv.classList.remove("marked")// Alle Noten, die nicht ausgewählt sind, nehmen normale Größe an
         }
     }
+    playCurrentMarkedNote();
 
 if (markedNoteName==pressedNoteName){// Es wird überprüft, ob die richtige Note gedrückt wurde.
     score ++ //Wenn die richtige Note gedrückt wurde, bekommt man einen Punkt.
+    playCorrectAnswerSound();
 }
 else{
     score --// Wenn jedoch die falsche Note gedrückt wurde, wird ein Punkt abgezogen.
+    playIncorrectAnswerSound();
 }
 showScore("score-panel", score)
 points = document.getElementById("points")
@@ -173,4 +192,3 @@ if (score >= 25){// Sobald die Maximalpunktzahl, 50, erreicht wird,...
     points.value="YOU WON!"//...Erscheint "YOU WON!"
 }
 }
-
