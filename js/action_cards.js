@@ -94,7 +94,7 @@ function handclick5(){
     Random_buttons()
 
 }
-function handclick5(){
+function handclick7(){
     Randomnotennummer=Math.round(Math.random()*Länge);
     Randomnote=Notenliste[Randomnotennummer];
     console.log("Text"+Randomnote+"ausgewählt"+"mit der Nummer"+Randomnotennummer);
@@ -166,11 +166,4 @@ else{
     score --// Wenn jedoch die falsche Note gedrückt wurde, wird ein Punkt abgezogen.
 }
 showScore("score-panel", score)
-points = document.getElementById("points")
-points.value = score
-
-if (score >= 25){// Sobald die Maximalpunktzahl, 50, erreicht wird,...
-    points.value="YOU WON!"//...Erscheint "YOU WON!"
 }
-}
-

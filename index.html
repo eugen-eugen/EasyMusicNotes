@@ -6,8 +6,8 @@
         <link rel="stylesheet" type="text/css" href="css/score-display.css">
         <script src="js/action_cards.js"></script>
         <script src="js/score-display.js"></script>
-        <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-        <link rel="manifest" href="./manifest.json">
+        <link rel="icon" href="./icons/logo128.png">
+        <link rel="manifest" href="./cards/manifest.json">
         <link rel="apple-touch-icon" href="./icons/logo128.png" sizes="57x57">
             <title>Easy Musicnotes</title>
     </head>
@@ -25,7 +25,7 @@
                 <div class="under under_2">
                 </div>
             </div>
-            <div id="digit_2" class="digit7">
+            <div id="digit_3" class="digit7">
                 <div class="above above_0">
                 </div>
                 <div class="under under_0">
@@ -40,7 +40,7 @@
             <div class="text" onclick="handclick4()">Note 4</div>
             <div class="text" onclick="handclick5()">Note 5</div>
             <div class="text" onclick="handclick7()">Note 6</div>
-            <div id="card_stack_new" class="cards" onClick="Drawcards();">
+            <div id="card_stack_new" class="cards" onclick="randomNotes()">
                 <img id="notekey" src="images/Violin.png" height="91%">
             </div>
             <div id="card0" class="cards note marked">

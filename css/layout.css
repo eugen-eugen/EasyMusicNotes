@@ -75,20 +75,6 @@ body, html {
     right: 5%;
     cursor: default;
 }
-#pianokeyboard{
-    width: 1470px;
-    height: 230px;
-    background-color: rgb(32, 13, 13);
-    position:absolute;
-    top: 350px
-}
-.key{
-    width:26px;
-    height: 210px;
-    background-color: white;
-    position:absolute;
-    top: 0;
-}
 #noteletter{
     width:1470px;
     position:absolute;
